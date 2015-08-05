@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <script src="http://www.metrovias.com.ar/Scripts/jquery-1.10.2.js"></script>
+    <script src="http://www.metrovias.com.ar/Scripts/clamp.js"></script>
+    <script src="http://www.metrovias.com.ar/Scripts/html5shiv.js"></script>
+    <script src="http://www.metrovias.com.ar/Scripts/respond.js"></script>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="lib/ionic-service-analytics/ionic-analytics.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <link href="http://code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+</head>
+
+  <body ng-app="ionicApp">
+     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+     <script type="text/javascript" charset="utf-8">
+
+     document.addEventListener("deviceready", onDeviceReady, false);
+
+     function onDeviceReady() {
+         checkConnection();
+     }
+
+         function checkConnection() {
+             var networkState = navigator.connection.type;
+
+             var states = {};
+             states[Connection.UNKNOWN]  = 'Unknown connection';
+             states[Connection.ETHERNET] = 'Ethernet connection';
+             states[Connection.WIFI]     = 'WiFi connection';
+             states[Connection.CELL_2G]  = 'Cell 2G connection';
+             states[Connection.CELL_3G]  = 'Cell 3G connection';
+             states[Connection.CELL_4G]  = 'Cell 4G connection';
+             states[Connection.CELL]     = 'Cell generic connection';
+             states[Connection.NONE]     = 'No network connection';
+
+           /*  alert('Tipo de conexion ' + states[networkState]);*/
+           if (states[networkState]== 'No network connection') {
+             alert("Sin conexion :(");
+           }
+         }
+
+     </script>
+         <ion-view>
+
+           <ion-slide-box on-slide-changed="slideChanged(index)">
+             <ion-slide>
+               <div class="bar bar-header bar-calm">
+                 <h1 class="title">Antes de Salir</h1>
+               </div>
+               <img id="bg" src="img/obelisco.jpg" alt="background">
+            <script type="text/javascript">
+            window.onload = function() {
+              function bgadj(){
+                  var element = document.getElementById("bg");
+                  var ratio =  element.width / element.height;
+                  if ((window.innerWidth / window.innerHeight) < ratio){
+                      element.style.width = 'auto';
+                      element.style.height = '100%';
+                      if (element.width > window.innerWidth){
+                          var ajuste = (window.innerWidth - element.width)/2;
+                          element.style.left = ajuste+'px';
+                      }
+                  }
+                  else{
+                      element.style.width = '100%';
+                      element.style.height = 'auto';
+                      element.style.left = '0';
+                  }
+              }
+              window.onresize = function() {
+                  bgadj();
+              }
+            }
+            </script>
+
+            <button id="pepe" class="button button-clear button-stable" href="https://twitter.com/fakupm">
+              Desarrollado por @fakupm
+            </button>
+            <button id="deslice" class="button button-clear button-assertive" ng-click="next()"><img id="dedo" src="img/dedo.png"></button>
+             </ion-slide>
+             <ion-slide>
+
+               <div class="bar bar-header bar-balanced">
+                 <img src="img/Weather.png">
+                 <h1 class="title">Temperatura Actual</h1>
+
+               </div>
+               <div class="list card">
+
+             <div class="item item-image">
+               <div id="TT_tuqALhdhd88KWMpUsfutDsmrosnU1YcEfvhwdjfvb6k"></div>
+               <script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_tuqALhdhd88KWMpUsfutDsmrosnU1YcEfvhwdjfvb6k"></script>
+             </div>
+     </div>
+     <ion-infinite-scroll on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>
+             </ion-slide>
+
+             <ion-slide>
+           <div class="bar bar-header bar-positive">
+             <img src="img/subte.png">
+             <h1 class="title">Estado de Subtes</h1>
+           </div>
+               <div class="col-md-4" id="subway-line-status">
+               <link rel="stylesheet" href="http://www.metrovias.com.ar/content/subway_rightSection.css">
+               <section id="linesStateSection" class="rightSection">
+                   <div class="right-bar-item-container">
+                 <!--Linea A -->
+                <a class="item item-icon-left">
+                 <img src="http://www.metrovias.com.ar/images/subwayContent/linea_A.png" alt="Linea A">
+                 <td>L&#xED;nea A</td>
+                 <td class="estado " style="" id="status-line-A-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-A"></span>
+                     </div>
+                 </td>
+               </a>
+                 <!--Linea B -->
+                <a class="item item-icon-left">
+                 <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_B.png" alt="Linea B"></td>
+                 <td style="width: 55px;">L&#xED;nea B</td>
+                 <td class="estado " style="" id="status-line-B-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-B"></span>
+                     </div>
+                 </td>
+               </a>
+                 <!--Linea C -->
+                <a class="item item-icon-left">
+                 <td style="width: 5px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_C.png" alt="Linea C"></td>
+                 <td style="width: 55px;">L&#xED;nea C</td>
+                 <td class="estado " style="" id="status-line-C-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-C"></span>
+                     </div>
+                 </td>
+               </a>
+                 <!--Linea D -->
+             <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_D.png" alt="Linea D"></td>
+                   <td style="width: 55px;">L&#xED;nea D</td>
+                   <td class="estado " style="" id="status-line-D-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-D"></span>
+                       </div>
+                   </td>
+             </a>
+             <!--Linea E -->
+            <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_E.png" alt="Linea E"></td>
+                   <td style="width: 55px;">L&#xED;nea E</td>
+                   <td class="estado " style="" id="status-line-E-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-E"></span>
+                       </div>
+                   </td>
+           </a>
+           <!--Linea H -->
+           <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_H.png" alt="Linea H"></td>
+                   <td style="width: 55px;">L&#xED;nea H</td>
+                   <td class="estado " style="" id="status-line-H-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-H"></span>
+                       </div>
+                   </td>
+               </a>
+               <!--Linea P -->
+              <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_P.png" alt="Linea P"></td>
+                   <td style="width: 55px;">L&#xED;nea P</td>
+                   <td class="estado suspendido" style="" id="status-line-P-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-P"></span>
+                       </div>
+                   </td>
+               </a>
+               <!--Linea U -->
+              <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_U.png" alt="Linea U"></td>
+                   <td style="width: 55px;">L&#xED;nea U</td>
+                   <td class="estado " style="" id="status-line-U-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-U"></span>
+                       </div>
+                   </td>
+               </a>
+             </div>
+
+             <script type="text/javascript">
+                 url = "http://www.metrovias.com.ar/Subterraneos/Estado?site=Metrovias";
+                 setInterval(function() {
+                     refresh(url);
+                 }, 5000);
+             </script>
+     </section></div>
+         <div class="backgroundFooter"></div>
+
+     <script src="http://www.metrovias.com.ar/Scripts/bootstrap.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/jclock.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/common.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/home.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/line-status-refresh.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/menu-nav.js"></script>
+             </ion-slide>
+
+             <ion-slide>
+               <div class="bar bar-header bar-assertive">
+                 <h1 class="title">Estado de Autopistas</h1>
+               </div>
+
+
+           </ion-slide>
+           <ion-slide>
+             <div class="button-bar">
+               <a class="button"><img src="img/subte.png"></a>
+               <a class="button">Second</a>
+               <a class="button">Third</a>
+             </div>
+           </ion-slide>
+           </ion-slide-box>
+     </ion-view>
+
+</body>
+</html>
