@@ -27,60 +27,81 @@ angular.module('starter', ['ionic'])
   });
 })
 
-angular.module('ionicApp', ['ionic'])
-
 .config(function($stateProvider, $urlRouterProvider) {
 
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
   $stateProvider
-  .state('intro', {
-    url: '/',
-    templateUrl: 'index.html',
-    controller: 'IntroCtrl'
+
+  // setup an abstract state for the tabs directive
+    .state('tab', {
+    url: '/tab',
+    abstract: true,
+    templateUrl: 'templates/tabs.html'
   })
-  .state('main', {
-    url: '/hola',
-    templateUrl: 'hola/main.html',
-    controller: 'MainCtrl'
+
+  // Each tab has its own nav history stack:
+
+  .state('tab.dash', {
+    url: '/dash',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+
+  .state('tab.chats', {
+      url: '/chats',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/tab-chats.html',
+          controller: 'ChatsCtrl'
+        }
+      }
+    })
+    .state('tab.chat-detail', {
+      url: '/chats/:chatId',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/chat-detail.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+
+  .state('tab.account', {
+    url: '/account',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/tab-account.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+  .state('tab.autopistas', {
+    url: '/autopistas',
+    views: {
+      'autopistas': {
+        templateUrl: 'templates/autopistas.html',
+        controller: 'autopistas'
+      }
+    }
+  })
+  .state('tab.sube', {
+    url: '/sube',
+    views: {
+      'sube': {
+        templateUrl: 'templates/sube.html',
+        controller: 'sube'
+      }
+    }
   });
 
-  $urlRouterProvider.otherwise("/");
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('/tab/dash');
 
-})
-
-.controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate) {
-
-  // Called to navigate to the main app
-  $scope.startApp = function() {
-    $state.go('main');
-  };
-  $scope.next = function() {
-    $ionicSlideBoxDelegate.next();
-  };
-  $scope.previous = function() {
-    $ionicSlideBoxDelegate.previous();
-  };
-
-  // Called each time the slide changes
-  $scope.slideChanged = function(index) {
-    $scope.slideIndex = index;
-  };
-})
-
-.controller('MainCtrl', function($scope, $state) {
-  console.log('MainCtrl');
-
-  $scope.toIntro = function(){
-    $state.go('intro');
-  }
-});
-angular.module('LoadingApp', ['ionic'])
-.controller('LoadingCtrl', function($scope, $ionicLoading) {
-  $scope.show = function() {
-    $ionicLoading.show({
-      template: 'Loading...'
-    });
-  };
-  $scope.hide = function(){
-    $ionicLoading.hide();
-  };
 });

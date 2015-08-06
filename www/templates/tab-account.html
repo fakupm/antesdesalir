@@ -1,0 +1,127 @@
+
+<ion-view >
+ <ion-content>
+
+
+<div class="bar bar-header bar-positive">
+             <img src="img/subte.png">
+             <h1 class="title">Estado de Subtes</h1>
+           </div>
+         </br>
+
+          </br>
+          </br>
+          </br>
+          </br>
+               <div class="col-md-4" id="subway-line-status">
+               <link rel="stylesheet" href="http://www.metrovias.com.ar/content/subway_rightSection.css">
+               <section id="linesStateSection" class="rightSection">
+                   <div class="right-bar-item-container">
+                 <!--Linea A -->
+                <a class="item item-icon-left">
+                 <img src="http://www.metrovias.com.ar/images/subwayContent/linea_A.png" alt="Linea A">
+                 <td>L&#xED;nea A</td>
+                 <td class="estado " style="" id="status-line-A-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-A"></span>
+                     </div>
+                 </td>
+               </a>
+                 <!--Linea B -->
+                <a class="item item-icon-left">
+                 <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_B.png" alt="Linea B"></td>
+                 <td style="width: 55px;">L&#xED;nea B</td>
+                 <td class="estado " style="" id="status-line-B-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-B"></span>
+                     </div>
+                 </td>
+               </a>
+                 <!--Linea C -->
+                <a class="item item-icon-left">
+                 <td style="width: 5px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_C.png" alt="Linea C"></td>
+                 <td style="width: 55px;">L&#xED;nea C</td>
+                 <td class="estado " style="" id="status-line-C-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-C"></span>
+                     </div>
+                 </td>
+               </a>
+                 <!--Linea D -->
+             <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_D.png" alt="Linea D"></td>
+                   <td style="width: 55px;">L&#xED;nea D</td>
+                   <td class="estado " style="" id="status-line-D-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-D"></span>
+                       </div>
+                   </td>
+             </a>
+             <!--Linea E -->
+            <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_E.png" alt="Linea E"></td>
+                   <td style="width: 55px;">L&#xED;nea E</td>
+                   <td class="estado " style="" id="status-line-E-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-E"></span>
+                       </div>
+                   </td>
+           </a>
+           <!--Linea H -->
+           <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_H.png" alt="Linea H"></td>
+                   <td style="width: 55px;">L&#xED;nea H</td>
+                   <td class="estado " style="" id="status-line-H-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-H"></span>
+                       </div>
+                   </td>
+               </a>
+               <!--Linea P -->
+              <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_P.png" alt="Linea P"></td>
+                   <td style="width: 55px;">L&#xED;nea P</td>
+                   <td class="estado suspendido" style="" id="status-line-P-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-P"></span>
+                       </div>
+                   </td>
+               </a>
+               <!--Linea U -->
+              <a class="item item-icon-left">
+                   <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_U.png" alt="Linea U"></td>
+                   <td style="width: 55px;">L&#xED;nea U</td>
+                   <td class="estado " style="" id="status-line-U-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-U"></span>
+                       </div>
+                   </td>
+               </a>
+             </div>
+
+             <script type="text/javascript">
+                 url = "http://www.metrovias.com.ar/Subterraneos/Estado?site=Metrovias";
+                 setInterval(function() {
+                     refresh(url);
+                 }, 5000);
+             </script>
+     </section></div>
+         <div class="backgroundFooter"></div>
+
+     <script src="http://www.metrovias.com.ar/Scripts/bootstrap.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/jclock.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/common.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/home.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/line-status-refresh.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/menu-nav.js"></script>
+
+   </ion-content>
+ </ion-view>

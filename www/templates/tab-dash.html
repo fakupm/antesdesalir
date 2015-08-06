@@ -1,0 +1,32 @@
+<div class="bar bar-header bar-calm">
+  <h1 class="title">Antes de Salir</h1>
+</div>
+<img id="bg" src="img/obelisco.jpg" alt="background">
+<script type="text/javascript">
+window.onload = function() {
+function bgadj(){
+   var element = document.getElementById("bg");
+   var ratio =  element.width / element.height;
+   if ((window.innerWidth / window.innerHeight) < ratio){
+       element.style.width = 'auto';
+       element.style.height = '100%';
+       if (element.width > window.innerWidth){
+           var ajuste = (window.innerWidth - element.width)/2;
+           element.style.left = ajuste+'px';
+       }
+   }
+   else{
+       element.style.width = '100%';
+       element.style.height = 'auto';
+       element.style.left = '0';
+   }
+}
+window.onresize = function() {
+   bgadj();
+}
+}
+</script>
+
+<button id="pepe" class="button button-clear button-stable" href="https://twitter.com/fakupm">
+Desarrollado por @fakupm
+</button>
