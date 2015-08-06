@@ -2,7 +2,7 @@
 <widget id="com.ionicframework.antesdesalir833581" version="2.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>antesdesalir</name>
   <description>
-        La aplicacion que se necesita antes de salir. Cuanta con el estado de clima, funcionamiento del subte, estado de autopistasy mas.
+        La aplicacion que se necesita antes de salir. Cuenta con el estado de clima, funcionamiento del subte, estado de autopistas y más.
     </description>
   <author email="fakulong@gmail.com" href="http://google.com/">
       FPM
