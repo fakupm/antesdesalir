@@ -2,9 +2,8 @@
 <ion-view >
  <ion-content>
 
-
 <div class="bar bar-header bar-positive">
-             <img src="img/subte.png">
+
              <h1 class="title">Estado de Subtes</h1>
            </div>
          </br>
@@ -18,8 +17,11 @@
                <section id="linesStateSection" class="rightSection">
                    <div class="right-bar-item-container">
                  <!--Linea A -->
-                <a class="item item-icon-left">
-                 <img src="http://www.metrovias.com.ar/images/subwayContent/linea_A.png" alt="Linea A">
+                <!--<a class="item item-icon-left">-->
+                <div class="list">
+
+    <a class="item item-avatar" href="#">
+         <img src="http://www.metrovias.com.ar/images/subwayContent/linea_A.png" alt="Linea A">
                  <td>L&#xED;nea A</td>
                  <td class="estado " style="" id="status-line-A-container">
                      <div style="float: right;">
@@ -28,9 +30,18 @@
                      </div>
                  </td>
                </a>
+
+
+                   </a>
+               </div>
+
                  <!--Linea B -->
-                <a class="item item-icon-left">
-                 <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_B.png" alt="Linea B"></td>
+                <!--<a class="item item-icon-left">-->
+
+                <div class="card">
+  <div class="item item-text-wrap">
+
+           <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_B.png" alt="Linea B"></td>
                  <td style="width: 55px;">L&#xED;nea B</td>
                  <td class="estado " style="" id="status-line-B-container">
                      <div style="float: right;">
@@ -39,8 +50,13 @@
                      </div>
                  </td>
                </a>
+
+             </div>
+           </div>
+
                  <!--Linea C -->
-                <a class="item item-icon-left">
+                 <div class="card">
+                   <div class="item item-text-wrap">
                  <td style="width: 5px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_C.png" alt="Linea C"></td>
                  <td style="width: 55px;">L&#xED;nea C</td>
                  <td class="estado " style="" id="status-line-C-container">
@@ -50,6 +66,8 @@
                      </div>
                  </td>
                </a>
+             </div>
+             </div>
                  <!--Linea D -->
              <a class="item item-icon-left">
                    <td style="width: 10px;"><img src="http://www.metrovias.com.ar/images/subwayContent/linea_D.png" alt="Linea D"></td>
@@ -122,6 +140,8 @@
      <script src="http://www.metrovias.com.ar/Scripts/home.js"></script>
      <script src="http://www.metrovias.com.ar/Scripts/line-status-refresh.js"></script>
      <script src="http://www.metrovias.com.ar/Scripts/menu-nav.js"></script>
+
+    </ion-scroll>
 
    </ion-content>
  </ion-view>
