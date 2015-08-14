@@ -25,6 +25,41 @@ p {
     z-index:-1;
 }
 
+.linea-A {
+    background: #05ADDE;
+}
+.linea-B {
+    background: #E91627;
+}
+.linea-C {
+    background: #046AB4;
+}
+.linea-D {
+    background: #087F69;
+}
+.linea-E {
+    background: #6D2281;
+}
+.linea-H {
+    background: #FFCA03;
+    border-color: #4E5366;
+    color: #4E5366;
+}
+.linea-P {
+    background: #FDBA2D;
+}
+.pastilla {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    border-radius: 0%;
+    border: 2px solid white;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+}
+
 .spinner svg {
   width: 19% !important;
   height: 85px !important;
