@@ -1,0 +1,126 @@
+
+<ion-view >
+ <ion-content>
+
+<div class="bar bar-header bar-positive">
+
+             <h1 class="title">Estado de Subtes</h1>
+           </div>
+         </br>
+
+          </br>
+          </br>
+          </br>
+          </br>
+               <div class="col-md-4" id="subway-line-status">
+               <link rel="stylesheet" href="http://www.metrovias.com.ar/content/subway_rightSection.css">
+               <section id="linesStateSection" class="rightSection">
+                   <div class="right-bar-item-container">
+                 <!--Linea A -->
+                <!--<a class="item item-icon-left">-->
+
+
+             <a class="item item-icon-left">
+                 <td style="width: 10px;">
+        <div class="pastilla linea-A">L&#xED;nea A</div>
+                 <td class="estado " style="" id="status-line-A-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-A"></span>
+                     </div>
+                 </td>
+               </a>
+                   </a>
+               </div>
+
+                 <!--Linea B -->
+                <!--<a class="item item-icon-left">-->
+
+
+             <a class="item item-icon-left">
+           <td style="width: 10px;">
+             <!--<img src="http://www.metrovias.com.ar/images/subwayContent/linea_B.png" alt="Linea B"></td>-->
+             <div class="pastilla linea-B">L&#xED;nea B</div>
+                 <td class="estado " style="" id="status-line-B-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-B"></span>
+                     </div>
+                 </td>
+               </a>
+
+
+                 <!--Linea C -->
+             <a class="item item-icon-left">
+             <div class="pastilla linea-C">L&#xED;nea C</div>
+                 <td class="estado " style="" id="status-line-C-container">
+                     <div style="float: right;">
+                         <span class="iconoEstado"></span>
+                         <span id="status-line-C"></span>
+                     </div>
+                 </td>
+               </a>
+
+                 <!--Linea D -->
+             <a class="item item-icon-left">
+             <div class="pastilla linea-D">L&#xED;nea D</div>
+                   <td class="estado " style="" id="status-line-D-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-D"></span>
+                       </div>
+                   </td>
+             </a>
+             <!--Linea E -->
+            <a class="item item-icon-left">
+             <div class="pastilla linea-E">L&#xED;nea E</div>
+                   <td class="estado " style="" id="status-line-E-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-E"></span>
+                       </div>
+                   </td>
+           </a>
+           <!--Linea H -->
+           <a class="item item-icon-left">
+             <div class="pastilla linea-H">L&#xED;nea H</div>
+                   <td class="estado " style="" id="status-line-H-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-H"></span>
+                       </div>
+                   </td>
+               </a>
+               <!--Linea P -->
+              <a class="item item-icon-left">
+             <div class="pastilla linea-P">L&#xED;nea P</div>
+                   <td class="estado suspendido" style="" id="status-line-P-container">
+                       <div style="float: right;">
+                           <span class="iconoEstado"></span>
+                           <span id="status-line-P"></span>
+                       </div>
+                   </td>
+               </a>
+
+             </div>
+
+             <script type="text/javascript">
+                 url = "http://www.metrovias.com.ar/Subterraneos/Estado?site=Metrovias";
+                 setInterval(function() {
+                     refresh(url);
+                 }, 5000);
+             </script>
+     </section></div>
+         <div class="backgroundFooter"></div>
+
+     <script src="http://www.metrovias.com.ar/Scripts/bootstrap.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/jclock.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/common.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/home.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/line-status-refresh.js"></script>
+     <script src="http://www.metrovias.com.ar/Scripts/menu-nav.js"></script>
+
+
+
+   </ion-content>
+ </ion-view>
