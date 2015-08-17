@@ -1,22 +1,17 @@
 
 angular.module('starter', ['ionic', 'starter.controllers'])
 
-.run(function($ionicPlatform) {
+
+.run(function($ionicPlatform, $cordovaStatusbar) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
+
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+    }
 
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-StatusBar.hide();
-    }
+    $cordovaStatusbar.styleHex('#D32F2F');
   });
 })
-
 
 var nameApp = angular.module('starter', ['ionic', 'ui.router']);
 
@@ -70,6 +65,14 @@ nameApp.config(function($stateProvider, $urlRouterProvider) {
           }
         }
       })
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/login.html'
+          }
+        }
+      })
       .state('app.acercade', {
         url: '/acercade',
         views: {
@@ -83,7 +86,7 @@ nameApp.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/app/clima');
   })
 
-  
+
 
 nameApp.controller('AppCtrl', function($scope) {
   $scope.$on('$ionicView.afterEnter', function(){
