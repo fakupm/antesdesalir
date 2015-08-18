@@ -1,13 +1,80 @@
 
-<ion-view view-title="Temperatura actual">
-  <ion-content>
+<ion-view   id="weather-background" class="default-weather" view-title="Temperatura actual" >
+
     <!--
                  <div id="TT_tuqALhdhd88KWMpUsfutDsmrosnU1YcEfvhwdjfvb6k"></div>
                  <script type="text/javascript" src="http://www.tutiempo.net/widget/eltiempo_tuqALhdhd88KWMpUsfutDsmrosnU1YcEfvhwdjfvb6k"></script>
 -->
 
-<iframe src="//doocoding.com/weathersticker/widget/long.php?lat=-34.6036844&lon=-58.3815591&location=Buenos+Aires%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires%2C+Argentina" width="100%" height="450" frameborder="0"></iframe>
 
-<iframe src="//doocoding.com/weathersticker/widget/animate.php?lat=-34.6036844&lon=-58.3815591&location=Buenos+Aires%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires%2C+Argentina" width="100%" height="160" frameborder="0"></iframe>
-  </ion-content>
+        <canvas id="rain-canvas">
+
+        </canvas>
+
+        <canvas id="cloud-canvas">
+
+        </canvas>
+
+        <canvas id="weather-canvas">
+
+        </canvas>
+
+        <canvas id="time-canvas">
+
+        </canvas>
+        <canvas id="lightning-canvas">
+
+        </canvas>
+    <div class="page-wrap">
+
+
+</br>
+        <header class="search-bar">
+            <p class="search-text"><span class="search-location-text">Ubicacion: <input id="search-location-input" class="search-location-input" type="text" placeholder="City"></span></p>
+
+                <button id="search-location-button" class="fa fa-search search-location-button search-button"></button>
+
+        </header>
+
+        <div id="geo-error-message" class="geo-error-message hide"><button id='close-error' class='fa fa-times close-error'></button></div>
+
+        <div id="front-page-description" class="front-page-description middle">
+
+        </div>
+        <div class="attribution-links hide" id="attribution-links"><button id='close-attribution' class='fa fa-times close-attribution'></button>
+
+            <ul>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/cloud/6852/">Cloud</a></li>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/snow/64/">Snow</a></li>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/drop/11449/">Drop</a></li>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/smoke/27750/">Smoke</a></li>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/moon/13554/">Moon</a></li>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/warning/18974/">Warning</a> </li>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/sun/13545/">Sun</a> </li>
+                <li class="icon-attribution"><a href="https://thenounproject.com/term/windsock/135621/">Windsock</a> </li>
+        </div>
+        <div id="weather" class="weather middle hide">
+            <div class="location" id="location"></div>
+            <div class="weather-container">
+                <div id="temperature-info" class="temperature-info">
+                    <div class="temperature" id="temperature"></div>
+                    <div class="weather-description" id="weather-description"></div>
+                </div>
+                <div class="weather-box">
+                    <ul class="weather-info" id="weather-info">
+                        <li class="weather-item humidity">Humedad: <span id="humidity"></span>%</li>
+                     <li class="weather-item wind">Viento: <span id="wind-direction"></span> <span id="wind"></span> <span id="speed-unit"></span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="weather.js"></script>
+
+
 </ion-view>
