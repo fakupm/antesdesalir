@@ -119,7 +119,7 @@
         text-align:left;
         display:inline;
         margin:0;
-    } 
+    }
 
     .search-location-button-group {
         display: inline;
@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .weather, .front-page-description {
     text-align:center;
-    color: #fff;
+    color: #FFFFFF;
     font-size:20px;
     font-weight:300;
 }
@@ -350,14 +350,14 @@ html, body {
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin-bottom: -100px; 
+  margin-bottom: -100px;
 }
 .page-wrap:after {
   content: "";
   display: block;
 }
 .site-footer, .page-wrap:after {
-  height: 100px; 
+  height: 100px;
 }
 .site-footer {
   background: #fff;
@@ -381,10 +381,10 @@ html, body {
 @media all and (min-width:341px) {
     .page-wrap {
       /* equal to footer height */
-      margin-bottom: -64px; 
+      margin-bottom: -64px;
     }
     .site-footer, .page-wrap:after {
-      height: 64px; 
+      height: 64px;
     }
 }
 
