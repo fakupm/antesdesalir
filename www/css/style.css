@@ -6,6 +6,12 @@ p {
   text-align: center;
   margin-bottom: 40px !important;
 }
+#bg{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
 #actual{
   margin: auto 30%;
 
