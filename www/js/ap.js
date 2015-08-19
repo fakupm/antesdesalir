@@ -23,6 +23,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
+    .run(function($ionicPlatform, $ionicPopup) {
+        $ionicPlatform.ready(function() {
+            if(window.Connection) {
+                if(navigator.connection.type == Connection.NONE) {
+                    $ionicPopup.confirm({
+                        title: "Sin Conexiona a internet :(",
+                        content: "Eh ameo conetate al waifal"
+                    })
+                    .then(function(result) {
+                        if(!result) {
+                            ionic.Platform.exitApp();
+                        }
+                    });
+                }
+            }
+        });
+    })
+
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
